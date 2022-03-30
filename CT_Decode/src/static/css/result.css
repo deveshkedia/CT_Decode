@@ -1,0 +1,22 @@
+.downloadlink {
+  text-decoration: none;
+  color: white;
+  width: 180px;
+  height: 20px;
+  padding: 12px;
+  margin-left: 100px;
+  border-radius: 25px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+  background-color: aquamarine;
+}
+
+.report {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.h2 {
+  margin-left: 100px;
+  text-align: center;
+  padding: 50px;
+}

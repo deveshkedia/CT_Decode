@@ -1,0 +1,24 @@
+.form {
+  margin-left: 200px;
+  margin-top: 50px;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form form input {
+  width: 400px;
+  height: 20px;
+}
+.form form select {
+  width: 400px;
+  height: 20px;
+}
+.submit {
+  align-self: center;
+  margin-left: 200px;
+  width: 100px !important;
+}

@@ -1,0 +1,36 @@
+{% extends 'layout.html'%}
+
+{% block link%}
+<link rel="stylesheet" href="../static/css/scan_result.css" />
+<link rel="stylesheet" href="../static/css/scan.css" />
+{%endblock%}
+
+
+{% block main %}
+{% include 'navbar.html'%}
+<div class="margin">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-md-7 contain">
+      <div class="form d-flex justify-content-between m-10">
+        <div class="container_result">
+          <h1 class="report-text">REPORT</h1>
+          <p class="report-description">
+          {{predicted_text}}
+          </p>
+          <a
+            class="download-link"
+            href="../static/media/png/{{file}}.png"
+            download
+          >
+            Download Your Report ↓</a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="../static/js/validate-form.js"></script>
+  </div>
+</div>
+
+{% include 'footer.html'%}
+
+{% endblock %}
