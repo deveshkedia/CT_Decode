@@ -1,0 +1,62 @@
+{%extends 'layout.html'%} {%block link%}
+<link rel="stylesheet" href="../static/css/home.css" />
+{%endblock%} {% block main %}
+<div class="image">
+  {% include "navbar.html" %}
+  <div class="text">
+    <h1 class="tag_line">CT-DECODE</h1>
+    <h3 class="comitted">
+      A web application that reads Lung CT Scan Images and detects lesions tn
+      the patients’ Lungs
+    </h3>
+  </div>
+  <img class="wave" src="../static/image/wavedown.png" alt="" />
+</div>
+
+<div class="main">
+  <div class="div2 container">
+    <h2>Why US?</h2>
+    <div class="container">
+      <div class="card">
+        It is a well-known fact that during the difficult time of the pandemic,
+        healthcare systems have failed because the number of patients surpassed
+        the available medical facility.
+      </div>
+      <div class="card">
+        The health care providers must prioritize the critical patients. This
+        web app enables radiologists, doctors, and even a layman to be able to
+        interpret CT scans and this enables the health care workers to know who
+        needs urgent attention thereby saving critical time.
+      </div>
+      <div class="card">
+        Most COVID patients develop lesions as an after-effect and need urgent
+        attention. If they aren’t treated immediately, it might prove to be
+        fatal. Thus my solution will help in prioritizing the critical patients
+        by telling the patient if lesions are present or not and the affected
+        percentage and also the care or treatment that needs to be undergone.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="totaldiv">
+  <img class="wave" src="../static/image/waveup.png" alt="" />
+  <div id="button-div">
+    <button
+      style="
+        --content: 'SCAN NOW!';
+        font-family: 'Source Code Pro';
+        font-size: 40px;
+        border-radius: 5px;
+      "
+      onclick="window.location.href='/scan'"
+    >
+      <div class="left"></div>
+      SCAN NOW!
+      <div class="right"></div>
+    </button>
+  </div>
+  <img class="wave" src="../static/image/wavefooter.png" alt="" />
+</div>
+
+{% include 'footer.html'%} {% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'layout.html'%} {% block link %}
+<link rel="stylesheet" href="../static/css/aboutus.css" />
+{% endblock %}
+<!-- navbar -->
+{% block main %} {% include 'navbar.html'%}
+<div id="main">
+  <div class="card mx-auto about-us">
+    <h1>About Us</h1>
+    <div id="profile-pic-container">
+      <div class="imgdiv" id="deveshimg">
+        <img src="devesh.jpg" alt="" class="dp" id="devesh" />
+        <h5>Devesh Kedia</h5>
+      </div>
+      <div class="imgdiv" id="arthurimg">
+        <img src="arthur.jpg" alt="" class="dp" id="arthur" />
+        <h5>Sourashis Sarkar</h5>
+      </div>
+    </div>
+    <h1>The Logical Order</h1>
+    <p>
+      Our team consists of two members: Devesh Kedia and Sourashis Sarkar.
+      <br />
+      <br />
+      Devesh is currently studying in 10th grade at La Martiniere for Boys,
+      Kolkata. He is a self-taught programmer and has a keen interest in web
+      development, app development, robotics and AI. He currently has knowledge
+      about Frontend Web Development, Backend Web Development with Python, App
+      development (both IOS and Android) and Basic Machine Learning, and is
+      currently mastering React, Node, and Tensorflow. <br />
+      <br />
+      Sourashis is currently studying in 12th grade at Central Model School,
+      Barrackpore. He is an AI and problem-solving enthusiast and has a keen
+      interest in Robotics, Data Science, Machine Learning and Artificial
+      Intelligence. He currently has knowledge about Python, HTML, CSS,
+      Javascript, C++ and Java and is currently mastering Web Development, Data
+      Striuctures & Algorithms and Deep Learning. <br /><br />
+      Both uf us met at Artificial Intelligence International Junior Contest,
+      held in 2020. And since then we have been working together in various
+      projects. Our main aim is to solve problems of the world using technology
+      and make the world a better place. Healthcare and Enveironment are some of
+      the fields we are lookng forward to. We are always in search of new ideas
+      and new challenges to solve.
+    </p>
+  </div>
+</div>
+{% include 'footer.html'%} {% endblock %}
+<!-- footer -->

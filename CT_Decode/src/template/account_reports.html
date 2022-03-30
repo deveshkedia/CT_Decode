@@ -1,0 +1,31 @@
+{% extends 'layout.html'%} {% block link %}
+<link rel="stylesheet" href="../static/css/account.css" />
+{% endblock %} {%block main%} {% include 'account_nav.html'%}
+<div class="main margin">
+  <h2 class="title-text">Reports</h2>
+  {% if data %}
+  <div class="reports">
+    {%for i in data%}
+    <div class="card" style="width: 18rem">
+      <div class="card-body">
+        <h5 class="card-title">{{i.name}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{i.date}}</h6>
+        <p class="card-text">
+          75% lessions were found in your lungs than in the average person.
+        </p>
+        <a
+          href="../static/media/png/{{i.filename}}"
+          download="{{i.name}}"
+          class="card-link"
+          >Download Report</a
+        >
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <a href="/dashboard/account_reports" class="clear">Clear Search</a>
+  {% else %}
+  <h2 class="nothing-display">No reports to show</h2>
+  {% endif %}
+</div>
+{% include 'footer.html'%} {%endblock%}

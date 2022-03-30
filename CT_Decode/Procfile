@@ -1,0 +1,1 @@
+web: gunicorn CT_decode.wsgi

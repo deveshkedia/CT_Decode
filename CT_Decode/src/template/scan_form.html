@@ -1,0 +1,81 @@
+{% extends 'layout.html'%}
+{%block link%}
+  <link rel="stylesheet" href="../static/css/scan.css" />
+{%endblock%}
+{% block main %}
+{% include 'navbar.html'%}
+<div class="container margin">
+  <div class="row d-flex justify-content-center align-items-center">
+    <div class="col-md-7">
+      <div class="form d-flex justify-content-between">
+        <div class="image">
+          <img src="../static/image/doctor.jpg" />
+        </div>
+        <form
+          class="col-6 card-body needs-validation form"
+          id="form"
+          novalidate
+          action="/scan"
+          method="post"
+          enctype="multipart/form-data"
+        >{% csrf_token %}
+          <div class="col-md-12 position-relative">
+            <label for="fileInput" class="form-label"
+              >Choose Your CT-Scan</label
+            >
+            <input
+              accept=".gz,.nii"
+              type="file"
+              class="form-control"
+              id="fileInput"
+              name="file"
+              required
+            />
+          </div>
+          <div class="col-md-12 position-relative">
+            <label for="name_input" class="form-label">Name: </label>
+            <input
+              type="text"
+              class="form-control"
+              id="name_input"
+              name="name"
+              required
+            />
+          </div>
+          <div class="col-md-12 position-relative">
+            <label for="age_input" class="form-label">Age: </label>
+            <input
+              type="number"
+              class="form-control"
+              id="age_input"
+              name="age"
+              required
+            />
+          </div>
+          <div class="col-md-12 position-relative">
+            <label for="gender_input" class="form-label">Gender</label>
+            <select
+              class="form-select"
+              id="gender_input"
+              name="gender"
+              required
+            >
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+            <div class="invalid-tooltip">Please select a valid state.</div>
+          </div>
+
+          <div class="col-12">
+            <button class="col-12 btn btn-danger submit-button" type="submit">
+              Analyse
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../static/js/validate-form.js"></script>
+  </div>
+</div>
+{% include 'footer.html' %}
+{%endblock%}

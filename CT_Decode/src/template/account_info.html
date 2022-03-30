@@ -1,0 +1,22 @@
+{% extends 'layout.html'%} {% block link %}
+<link rel="stylesheet" href="../static/css/account_info.css" />
+{%endblock%} {% block main%} {% include 'account_nav.html'%}
+<div class="main">
+  <div class="white-rectangle">
+    <div class="personal-details">
+      <div class="username-div">
+        <img src="../static/image/account.png" alt="" />
+        <h2 class="username">{{user_info.username}}</h2>
+      </div>
+      <h2>Email: - {{user_info.email}}</h2>
+    </div>
+    <div class="usage-details">
+      <div class="usage-details-a-div">
+        <a href="/dashboard/account_reports" class="box"
+          ><h4 class="hover">See your reports history</h4>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% include 'footer.html'%} {% endblock %}

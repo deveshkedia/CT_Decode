@@ -1,0 +1,69 @@
+<!-- {% load crispy_forms_tags %}
+
+<!--Login-->
+<!--<div class="container py-5">
+  <h1>Login</h1>
+  <form method="POST">
+    {% csrf_token %} {{ login_form|crispy }}
+    <button class="btn btn-primary" type="submit">Login</button>
+  </form>
+  <p class="text-center">
+    Don't have an account? <a href="/register">Create an account</a>.
+  </p>
+</div> -->
+<link rel="stylesheet" href="../static/css/signup.css" />
+<h1 hidden>{{login_form}}</h1>
+<div class="container" id="container">
+  <div class="form-container sign-up-container">
+    <form action="register" class="needs-validation" method="post" novalidate>
+      {% csrf_token %}
+      <h1>Create Account</h1>
+      <input class="form-control" type="text" name="username" placeholder="Name" required/>
+      <input class="form-control" type="email" name="email" placeholder="Email"  required/>
+      <input class="form-control" type="password" name="password1" placeholder="Password" required />
+      <input class="form-control" type="password" name="password2" placeholder="Confirm Password" required/>
+      <button>Sign Up</button>
+      {{form}}
+    </form>
+  </div>
+  <div class="form-container sign-in-container">
+    <form method="POST" action="login" novalidate class="needs-validation">
+      {% csrf_token %}
+      <h1>Sign in</h1>
+      <input class="form-control" type="username" name="username" placeholder="Username" required />
+      <input class="form-control" type="password" name="password" placeholder="Password" required/>
+      {% if error %}
+      <p class="danger">Username or Password Incorrect</p>
+      {%endif%}
+      <button>Sign In</button>
+    </form>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-left">
+        <h1>Welcome Back!</h1>
+        <p>To keep connected with us please login with your personal info</p>
+        <button class="ghost" id="signIn">Sign In</button>
+      </div>
+      <div class="overlay-panel overlay-right">
+        <h1>Hello, Friend!</h1>
+        <p>Enter your personal details and start journey with us</p>
+        <button class="ghost" id="signUp">Sign Up</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const signUpButton = document.getElementById("signUp");
+  const signInButton = document.getElementById("signIn");
+  const container = document.getElementById("container");
+
+  signUpButton.addEventListener("click", () => {
+    container.classList.add("right-panel-active");
+  });
+
+  signInButton.addEventListener("click", () => {
+    container.classList.remove("right-panel-active");
+  });
+</script>
+<script src="../static/js/validate-form.js"></script>

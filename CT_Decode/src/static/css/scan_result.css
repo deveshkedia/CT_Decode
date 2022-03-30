@@ -1,0 +1,26 @@
+.report-description {
+  font-size: 1.75vw;
+  font-weight: 350 !important;
+}
+
+.container_result {
+  padding: 50px 80px !important;
+  /* add a background image with 50% opacity */
+  background-image: url("../image/scan.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* change the background opacity to 50% without changing the opacity of the text */
+  background-color: rgba(255, 255, 255, 0.9);
+  background-blend-mode: overlay;
+}
+
+.report-text {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 650;
+}
+
+.download-link {
+  font-size: larger;
+}
