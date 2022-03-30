@@ -4,7 +4,7 @@ A web application that reads Lung CT Scan Images and detects lesions in the pati
 
 Languages used: HTML, CSS, JavaScript. Python
 
-**IMPORTANT**
+IMPORTANT
 1.
 For testing the "Scan" functionality of the website, we are providing 5 sample "nii.gz" files. They are stored in CT_Decode/CT_Decode/src/example-nii/ folder.
 
