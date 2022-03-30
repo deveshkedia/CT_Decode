@@ -80,12 +80,8 @@ WSGI_APPLICATION = 'CT_decode.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'CT_Decode',
-        'USER': 'deveshkedia',
-        'PASSWORD': 'Dkedia@3349',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -131,4 +127,3 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'MEDIABIN')
 # AUTH_USER_MODEL =  'src.UserModel'
 # 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
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
