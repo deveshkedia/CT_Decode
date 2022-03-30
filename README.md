@@ -10,10 +10,12 @@ IMPORTANT
 
 2. To run the project on the local server, start the application by using this statement in cmd:
 ```
+pip install -r requirements.txt
 python3 manage.py runserver
 ```
 or
 ```
+pip install -r requirements.txt
 python manage.py runserver
 ```
 depending on the python version.
